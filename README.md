@@ -17,7 +17,7 @@ I’m a passionate Full-Stack Developer with experience in React, .NET, SQL, and
 ## 🚀 Projects
 
 ### ScoreHub
-A football match information platform integrating the Sofascore API to display match schedules, teams, and player stats.  
+A football match information platform integrating a local API to display match schedules, teams, and player stats.  
 **Tech:** React, .NET Core, SQL Server  
 **Status:** In development (portfolio demo)
 
