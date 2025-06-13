@@ -5,6 +5,7 @@ import Header from './components/header.jsx'
 import Home from './components/home.jsx'
 import Aboutme from './components/aboutme.jsx'
 import Divider from './components/divider.jsx'
+import Skills from './components/skills.jsx'
 const App = () => {
 
   return (
@@ -13,6 +14,7 @@ const App = () => {
       <Home />
       <Divider />
       <Aboutme />
+      <Skills />
       <Divider />
     </>
   )
