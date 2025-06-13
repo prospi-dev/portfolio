@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import "../index.css"; 
+import React, { useState, useEffect } from "react";
+import "../index.css";
 const navLinks = [
   { href: "#home", label: "Home" },
   { href: "#about", label: "About Me" },
@@ -7,14 +7,25 @@ const navLinks = [
   { href: "#education", label: "Education" },
   { href: "#experience", label: "Experience" },
   { href: "#projects", label: "Projects" },
-  { href: "#contact", label: "Contact" },
 ];
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => {
+      setScrolled(window.scrollY > 10);
+    };
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
-    <header className="flex items-center justify-between px-6 py-4 relative z-20">
+    <header
+      className={`fixed top-0 left-0 w-full z-50 flex items-center justify-between px-6 py-4 transition-colors duration-300 ${scrolled ? "bg-[#0d1b24]/95 shadow-lg" : ""
+        }`}
+    >
       {/* Logo */}
       <div className="text-teal-300 text-2xl font-light tracking-widest z-30">MP</div>
 
@@ -33,8 +44,8 @@ const Header = () => {
 
       <div
         className={`fixed inset-0 bg-[#1a232a]/85 flex flex-col items-center justify-center z-40 transition-all duration-300 ${menuOpen
-            ? "opacity-100 translate-y-0 pointer-events-auto"
-            : "opacity-0 -translate-y-8 pointer-events-none"
+          ? "opacity-100 translate-y-0 pointer-events-auto"
+          : "opacity-0 -translate-y-8 pointer-events-none"
           }`}
         style={{ backdropFilter: "blur(2px)" }}
       >
@@ -58,7 +69,7 @@ const Header = () => {
             <a
               key={link.href}
               href={link.href}
-              className="text-white text-xl py-2 px-6 rounded-lg transition-all duration-200 hover:text-yellow-400 hover:bg-[#22303c] hover:scale-110"
+              className="neon-hover2 text-white text-xl py-2 px-6 rounded-lg transition-all duration-200 hover:text-yellow-400 hover:bg-[#22303c] hover:scale-110"
               style={{ display: "inline-block" }}
               onClick={() => setMenuOpen(false)}
             >
