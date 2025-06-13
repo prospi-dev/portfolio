@@ -5,5 +5,138 @@
 
   color-scheme: light dark;
   color: #eee;
-  background-color: #031926;
+  background: radial-gradient(ellipse at bottom, #031926 0%, #090a0f 100%);
+}
+#projects-button
+{
+  width: 100%;
+  height: 3em;
+}
+#projects-button:hover
+{
+scale: 1.1;
+}
+#contact-button
+{
+  width: 70%;
+  height: 2.5em;
+}
+#contact-button:hover
+{
+scale: 1.2;
+}
+#downloadcv-button
+{
+  width: 70%;
+  height: 2.5em;
+}
+#downloadcv-button:hover
+{
+scale: 1.2;
+}
+.home-button_container
+{
+  width: 60%;
+}
+
+.neon-btn {
+  color: #fff;
+  background: transparent;
+  border: 2px solid #39ff14;
+  padding: 0.5em 0.5em;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: color 0.3s, box-shadow 0.3s, border-color 0.3s;
+  box-shadow:
+    0 0 5px #39ff14,
+    0 0 10px #39ff14,
+    0 0 20px #39ff14,
+    0 0 40px #39ff1444;
+  outline: none;
+}
+
+.neon-btn:hover {
+  color: #0d0d0d;
+  background: #39ff14;
+  border-color: #fff;
+  box-shadow:
+    0 0 10px #37ff146e,
+    0 0 20px #37ff146e,
+    0 0 40px #37ff146e,
+    0 0 80px #39ff1466;
+}
+
+.neon-btn2 {
+  color: #fff;
+  background: transparent;
+  border: 2px solid #00c3ff;
+  padding: 0.5em;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: color 0.3s, box-shadow 0.3s, border-color 0.3s;
+  box-shadow:
+    0 0 5px #00c3ff,
+    0 0 10px #00c3ff,
+    0 0 20px #00c3ff,
+    0 0 40px #00c3ff44;
+  outline: none;
+}
+
+.neon-btn2:hover {
+  color: #0d0d0d;
+  background: #00c3ff;
+  border-color: #fff;
+  box-shadow:
+    0 0 10px #00c3ff,
+    0 0 20px #00c3ff,
+    0 0 40px #00c3ff,
+    0 0 80px #00c3ff66;
+}
+
+.neon-btn3 {
+  color: #fff;
+  background: transparent;
+  border: 2px solid;
+  border-radius: 8px;
+  cursor: pointer;
+  outline: none;
+  border-image: linear-gradient(90deg, #00c3ff, #39ff14, #ff00c8, #00c3ff) 1;
+  box-shadow:
+    0 0 8px #00c3ff,
+    0 0 16px #00c3ff;
+  animation: neon-border 3s linear infinite;
+  transition: color 0.3s, border-image 0.3s, box-shadow 0.3s;
+}
+
+@keyframes neon-border {
+  0% {
+    border-image: linear-gradient(90deg, #00c3ff, #39ff14, #ff00c8, #00c3ff) 1;
+    box-shadow:
+      0 0 8px #00c3ff,
+      0 0 16px #00c3ff;
+  }
+  33% {
+    border-image: linear-gradient(90deg, #39ff14, #ff00c8, #00c3ff, #39ff14) 1;
+    box-shadow:
+      0 0 8px #39ff14,
+      0 0 16px #39ff14;
+  }
+  66% {
+    border-image: linear-gradient(90deg, #ff00c8, #00c3ff, #39ff14, #ff00c8) 1;
+    box-shadow:
+      0 0 8px #ff00c8,
+      0 0 16px #ff00c8;
+  }
+  100% {
+    border-image: linear-gradient(90deg, #00c3ff, #39ff14, #ff00c8, #00c3ff) 1;
+    box-shadow:
+      0 0 8px #00c3ff,
+      0 0 16px #00c3ff;
+  }
+}
+
+.neon-btn3:hover{
+  color: #00FFC3;
 }

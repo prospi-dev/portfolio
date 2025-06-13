@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import "../index.css"; 
 const navLinks = [
   { href: "#home", label: "Home" },
   { href: "#about", label: "About Me" },
@@ -32,7 +32,7 @@ const Header = () => {
       </button>
 
       <div
-        className={`fixed inset-0 bg-[#1a232a]/95 flex flex-col items-center justify-center z-40 transition-all duration-300 ${menuOpen
+        className={`fixed inset-0 bg-[#1a232a]/85 flex flex-col items-center justify-center z-40 transition-all duration-300 ${menuOpen
             ? "opacity-100 translate-y-0 pointer-events-auto"
             : "opacity-0 -translate-y-8 pointer-events-none"
           }`}
