@@ -49,11 +49,10 @@ const Header = () => {
           }`}
         style={{ backdropFilter: "blur(2px)" }}
       >
-        {/* Top bar with logo and close button */}
         <div className="absolute top-0 left-0 w-full flex items-center justify-between px-6 py-4">
           <span className="text-teal-300 text-2xl font-extralight tracking-widest">MP</span>
           <button
-            className="text-white text-3xl focus:outline-none"
+            className="text-white text-3xl focus:outline-none cursor-pointer hover:text-gray-400 hover:scale-120 transition-transform duration-200"
             onClick={() => setMenuOpen(false)}
             aria-label="Close menu"
           >
