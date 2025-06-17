@@ -54,7 +54,7 @@ const Home = () => (
         Contact Me
       </a>
       <a
-        href="/cv.pdf"
+        href="/files/Manuel-Prosperi-CV-EN.pdf"
         download
         className="bg-white/10 hover:bg-white/20 text-white font-medium py-3 rounded-xl transition flex items-center justify-center gap-2 border border-gray-400 group overflow-hidden"
         id="downloadcv-button"
