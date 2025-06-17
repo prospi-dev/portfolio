@@ -23,7 +23,7 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-50 flex items-center justify-between px-6 py-4 transition-colors duration-300 ${scrolled ? "bg-[#0d1b24]/95 shadow-lg" : ""
+      className={`fixed top-0 left-0 w-full z-50 flex items-center justify-between px-6 py-4 transition-colors duration-300 lg:pt-4 lg:px-40 ${scrolled ? "bg-[#0d1b24]/95 shadow-lg" : ""
         }`}
     >
       {/* Logo */}
