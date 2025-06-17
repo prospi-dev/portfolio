@@ -8,11 +8,6 @@ const contactme = () => {
             <motion.section
                 id='contact'
                 className="flex flex-col items-center justify-center px-4 py-8 text-center"
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: 40 }}
-                transition={{ duration: 0.7, ease: "easeOut" }}
-                viewport={{ once: false, amount: 0.3 }}
             >
                 <h2 className="text-2xl font-semibold mb-4 pt-2">Contact</h2>
                 <div className="flex gap-6 justify-center mb-6">
