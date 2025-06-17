@@ -7,6 +7,7 @@ import Aboutme from './components/aboutme.jsx'
 import Divider from './components/divider.jsx'
 import { Education, Experience } from './components/education-experience.jsx'
 import Skills from './components/skills.jsx'
+import Contact from './components/contactme.jsx'
 const App = () => {
 
   return (
@@ -19,6 +20,7 @@ const App = () => {
       <Divider />
       <Education />
       <Experience />
+      <Contact />
     </>
   )
 };
