@@ -38,13 +38,13 @@ const Home = () => (
          <FaLinkedin className="text-3xl text-white" />
       </a>
     </div>
-    <div className="home-button_container flex flex-col gap-4 items-center">
+    <div className="home-button_container flex flex-col gap-4 items-center lg:max-w-xl">
       <a
         href="#projects"
         className="neon-btn3 flex items-center justify-center gap-2 shadow group overflow-hidden" 
         id='projects-button'
       >
-        <span className='transition-transform duration-300 group-hover:translate-x-5'>My Projects</span> <FaArrowRight className="text-xl text-white transition-transform duration-300 group-hover:translate-x-20 group-hover:scale-110" />
+        <span className='transition-transform duration-300 group-hover:translate-x-5'>My Projects</span> <FaArrowRight className="text-xl text-white transition-transform duration-300 group-hover:translate-x-80 group-hover:scale-110" />
       </a>
       <a
         href="#contact"
