@@ -8,6 +8,7 @@ import Divider from './components/divider.jsx'
 import { Education, Experience } from './components/education-experience.jsx'
 import Skills from './components/skills.jsx'
 import Contact from './components/contactme.jsx'
+import Projects from './components/projects.jsx'
 const App = () => {
 
   return (
@@ -20,6 +21,8 @@ const App = () => {
       <Divider />
       <Education />
       <Experience />
+      <Divider />
+      <Projects />
       <Contact />
     </>
   )

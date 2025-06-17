@@ -163,9 +163,11 @@ scale: 1.2;
   animation: neon-border 3s linear infinite;
   outline: none;
 }
-
+/*
 @media screen and (min-width: 1024px) {
 body{
   padding: 1em 5em 0em 5em;
 }
+header{padding: 1em 10em 0em 10em}
 }
+
