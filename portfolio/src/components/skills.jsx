@@ -24,7 +24,7 @@ const Skills = () => (
         viewport={{ once: false, amount: 0.3 }}
     >
         <h2 className="text-3xl font-semibold mb-8">Skills</h2>
-        <div className="skills grid grid-cols-2 sm:grid-cols-4 gap-y-10 gap-x-8">
+        <div className="skills grid grid-cols-2 sm:grid-cols-4 gap-y-10 gap-x-8 lg:grid-cols-8">
             {skills.map(({ icon, label }) => (
                 <div key={label} className="flex flex-col items-center  hover:scale-120 transition-transform duration-300">
                     {icon}

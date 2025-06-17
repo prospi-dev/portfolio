@@ -19,8 +19,10 @@ const App = () => {
       <Aboutme />
       <Skills />
       <Divider />
-      <Education />
-      <Experience />
+      <section id="education-experience" className="flex flex-col items-center lg:flex-row lg:justify-center lg:gap-10">
+        <Education />
+        <Experience />
+      </section>
       <Divider />
       <Projects />
       <Contact />
