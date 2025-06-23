@@ -35,7 +35,7 @@ const Skills = () => {
     return (
         <motion.section
             id="skills"
-            className="py-8 flex flex-col items-center"
+            className="py-8 flex flex-col items-center scroll-mt-30"
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 40 }}

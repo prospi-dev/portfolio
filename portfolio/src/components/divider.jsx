@@ -1,7 +1,37 @@
-const Divider = () => (
-  <div className="w-full flex justify-center my-8">
-    <div className="w-3/4 h-1 rounded-full bg-gradient-to-r from-transparent via-slate-300/60 to-transparent shadow-[0_0_16px_2px_rgba(180,200,220,0.3)]" />
-  </div>
-);
+import { motion } from 'framer-motion';
 
-export default Divider;
+const Divider = () => (
+  <section className="w-full overflow-hidden leading-none mt-20">
+    <svg
+      viewBox="0 0 1440 180"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className="w-full h-24 md:h-32"
+      preserveAspectRatio="none"
+    >
+      <path
+        d="M0,80 C360,160 1080,0 1440,100 L1440,180 L0,180 Z"
+        fill="#055e90"
+        opacity="1"
+      />
+    </svg>
+  </section>
+);
+const Divider2 = () => (
+  <section className="w-full overflow-hidden leading-none">
+    <svg
+      viewBox="0 0 1440 180"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className="w-full h-24 md:h-32"
+      preserveAspectRatio="none"
+    >
+      <path
+        d="M0,100 C360,0 1080,160 1440,80 L1440,0 L0,0 Z"
+        fill="#055e90"
+        opacity="1"
+      />
+    </svg>
+  </section>
+);
+export { Divider, Divider2 };
