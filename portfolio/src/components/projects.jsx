@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 const projects = () => (
     <motion.section
         id="projects"
-        className="py-6 flex flex-col items-center"
+        className="py-6 flex flex-col items-center scroll-mt-30"
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: 40 }}

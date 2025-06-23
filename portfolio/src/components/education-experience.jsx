@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const Education = () => (
   <motion.section id="education"
-    className="py-6 flex flex-col items-center"
+    className="py-6 flex flex-col items-center scroll-mt-30"
     initial={{ opacity: 0, y: 40 }}
     whileInView={{ opacity: 1, y: 0 }}
     exit={{ opacity: 0, y: 40 }}
@@ -32,7 +32,7 @@ const Education = () => (
 
 const Experience = () => (
   <motion.section id="experience"
-    className="flex flex-col items-center"
+    className="flex flex-col items-center scroll-mt-40"
     initial={{ opacity: 0, y: 40 }}
     whileInView={{ opacity: 1, y: 0 }}
     exit={{ opacity: 0, y: 40 }}

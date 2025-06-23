@@ -5,6 +5,17 @@
   color: #eee;
   background: radial-gradient(ellipse at bottom, #031926 0%, #090a0f 100%);
 }
+#about{background: #055e90;}
+#education-experience{background: #055e90;}
+#contact{background: #055e90;}
+#divider{
+    .animate-spin-slow {
+    animation: spin 3s linear infinite;
+  }
+  @keyframes spin {
+    100% { transform: rotate(360deg); }
+  }
+}
 #projects-button
 {
   width: 100%;
