@@ -2,12 +2,13 @@ import { useState } from "react";
 import emailjs from "@emailjs/browser";
 
 const SERVICE_ID = "service_m2mkjvm";
-const TEMPLATE_ID = "Gmail";
+const TEMPLATE_ID = "template_uw4h4xj";
 const PUBLIC_KEY = "xcv0Xq248XSJ4SKZv";
 
 const ContactForm = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [sent, setSent] = useState(false);
+  const [sending, setSending] = useState(false);
   const [error, setError] = useState("");
 
   const handleChange = (e) => {
@@ -17,6 +18,7 @@ const ContactForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
+    setSending(true);
     try {
       await emailjs.send(
         SERVICE_ID,
@@ -31,6 +33,8 @@ const ContactForm = () => {
       setSent(true);
     } catch (err) {
       setError("There was an error sending your message. Please try again.");
+    } finally {
+      setSending(false);
     }
   };
 
@@ -69,10 +73,19 @@ const ContactForm = () => {
       />
       <button
         type="submit"
-        className="bg-[#00c3ff] hover:bg-[#0099cc] text-white font-semibold py-3 rounded-xl transition"
-        disabled={sent}
+        className={"bg-[#00c3ff] hover:bg-[#0099cc] text-white font-semibold py-3 rounded-xl transition flex items-center justify-center gap-2" + (sent ? " cursor-not-allowed bg-green-500 hover:bg-green-400" : "")}
+        disabled={sent || sending}
       >
-        {sent ? "Message Sent!" : "Send Message"}
+        {sending ? (
+          <>
+            <span className="animate-spin rounded-full border-2 border-white border-t-transparent w-5 h-5 inline-block" />
+            Sending...
+          </>
+        ) : sent ? (
+          "Message Sent!"
+        ) : (
+          "Send Message"
+        )}
       </button>
       {error && <p className="text-red-400 text-center">{error}</p>}
     </form>
