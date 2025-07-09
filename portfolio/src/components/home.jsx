@@ -1,6 +1,6 @@
 import React from 'react';
 import { MdOutlineFileDownload } from "react-icons/md";
-import { FaGithub, FaLinkedin,FaArrowRight } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaArrowRight } from "react-icons/fa";
 import '../index.css'
 const Home = () => (
   <section
@@ -15,15 +15,16 @@ const Home = () => (
       <br />
       <span className="font-normal">a Full-Stack Developer.</span>
     </h1>
-    <p className="text-gray-300 max-w-md mb-6">
-      I’m a passionate Web Developer recently graduated in Web Application Development. I’m interested in both frontend and backend development.
+    <p className="text-gray-300 max-w-lg mb-6">
+      Passionate Full-Stack Developer with expertise in React, .NET, and modern web technologies.
+      I create efficient, scalable applications and love solving complex problems through code.
     </p>
     <div className="flex gap-6 justify-center mb-6">
       <a
         href="https://github.com/prospi-dev"
         target="_blank"
         rel="noopener noreferrer"
-        className="neon-btn p-3transition hover:scale-110" 
+        className="neon-btn p-3transition hover:scale-110"
         aria-label="GitHub"
       >
         <FaGithub className="text-3xl text-white" />
@@ -35,13 +36,13 @@ const Home = () => (
         className="neon-btn2 p-3transition hover:scale-110"
         aria-label="LinkedIn"
       >
-         <FaLinkedin className="text-3xl text-white" />
+        <FaLinkedin className="text-3xl text-white" />
       </a>
     </div>
     <div className="home-button_container flex flex-col gap-4 items-center lg:max-w-xl">
       <a
         href="#projects"
-        className="neon-btn3 flex items-center justify-center gap-2 shadow group overflow-hidden" 
+        className="neon-btn3 flex items-center justify-center gap-2 shadow group overflow-hidden"
         id='projects-button'
       >
         <span className='transition-transform duration-300 group-hover:translate-x-5'>My Projects</span> <FaArrowRight className="text-xl text-white transition-transform duration-300 group-hover:translate-x-80 group-hover:scale-110" />
@@ -64,7 +65,7 @@ const Home = () => (
       </a>
     </div>
   </section>
-  
+
 );
 
 export default Home;
