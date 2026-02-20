@@ -54,15 +54,29 @@ const Projects = () => (
             <h2 className="text-3xl lg:text-4xl font-bold mb-12 text-center bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
                 Featured Projects
             </h2>
-            
-            <motion.div 
+            <motion.div
+                className="flex flex-col items-center justify-center py-16 px-8"
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{opacity:1, scale:1}}
+                transition={{duration: 0.5}}
+                viewport={{once: true}}
+            >
+                <div className="text-6xl mb-6">🚧</div>
+                <h3 className="text 2xl lg:text-3xl font-bold text-yellow-400 mb-4 text-center">
+                    Working on New Projects
+                </h3>
+                <p className="text-gray-300 text-lg text-center max-w-md">
+                    I'm currently building new exciting projects. Check back soon to see what I've been working on!
+                </p>
+            </motion.div>
+            {/* <motion.div 
                 className="grid gap-8 md:gap-12"
                 variants={containerVariants}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
             >
-                {projectsData.map((project, index) => (
+               {projectsData.map((project, index) => (
                     <motion.div
                         key={project.id}
                         variants={itemVariants}
@@ -78,8 +92,7 @@ const Projects = () => (
                                     className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                                
-                                {/* Overlay con botones */}
+                                 
                                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                     <div className="flex gap-4">
                                         <a
@@ -159,7 +172,7 @@ const Projects = () => (
                         </div>
                     </motion.div>
                 ))}
-            </motion.div>
+            </motion.div> */}
         </div>
     </motion.section>
 );
