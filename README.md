@@ -19,7 +19,7 @@ I’m a passionate Full-Stack Developer with experience in React, .NET, SQL, and
 ### ScoreHub
 A football match information platform integrating a local API to display match schedules, teams, and player stats.  
 **Tech:** React, .NET Core, SQL Server  
-**Status:** In development (portfolio demo)
+**Status:** Finished. https://manuelprosperi-portfolio.netlify.app/
 
 ---
 
