@@ -1,7 +1,7 @@
 # Manuel Enrique Prosperi Edreira - Portfolio
 
 Welcome to my personal portfolio! Here you’ll find a selection of projects I’ve developed, technologies I work with, and a bit about my professional journey.
-
+https://manuelprosperi-portfolio.netlify.app/
 ---
 
 ## 👨‍💻 About Me
@@ -16,10 +16,7 @@ I’m a passionate Full-Stack Developer with experience in React, .NET, SQL, and
 
 ## 🚀 Projects
 
-### ScoreHub
-A football match information platform integrating a local API to display match schedules, teams, and player stats.  
-**Tech:** React, .NET Core, SQL Server  
-**Status:** Finished. https://manuelprosperi-portfolio.netlify.app/
+### Working on new projects.
 
 ---
 
