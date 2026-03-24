@@ -34,8 +34,8 @@ const containerVariants = {
 
 const itemVariants = {
     hidden: { opacity: 0, y: 20 },
-    visible: { 
-        opacity: 1, 
+    visible: {
+        opacity: 1,
         y: 0,
         transition: { duration: 0.6 }
     },
@@ -57,12 +57,12 @@ const Projects = () => (
             <motion.div
                 className="flex flex-col items-center justify-center py-16 px-8"
                 initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{opacity:1, scale:1}}
-                transition={{duration: 0.5}}
-                viewport={{once: true}}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
             >
                 <div className="text-6xl mb-6">🚧</div>
-                <h3 className="text 2xl lg:text-3xl font-bold text-yellow-400 mb-4 text-center">
+                <h3 className="text-2xl lg:text-3xl font-bold text-cyan-400 drop-shadow-[0_0_8px_rgba(34,211,238,0.5)] mb-4 text-center">
                     Working on New Projects
                 </h3>
                 <p className="text-gray-300 text-lg text-center max-w-md">

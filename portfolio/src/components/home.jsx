@@ -2,6 +2,7 @@ import React from 'react';
 import { MdOutlineFileDownload } from "react-icons/md";
 import { FaGithub, FaLinkedin, FaArrowRight } from "react-icons/fa";
 import '../index.css'
+
 const Home = () => (
   <section
     id="home"
@@ -11,11 +12,11 @@ const Home = () => (
       Hello! <span role="img" aria-label="wave">👋</span>
     </h2>
     <h1 className="text-3xl md:text-4xl font-bold mb-2">
-      I’m <span className="text-yellow-400">Manuel Prosperi</span>,
+      I’m <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-fuchsia-500 bg-clip-text text-transparent drop-shadow-[0_0_10px_rgba(34,211,238,0.4)]">Manuel Prosperi</span>,
       <br />
-      <span className="font-normal">a Full-Stack Developer.</span>
+      <span className="font-normal text-gray-200">a Full-Stack Developer.</span>
     </h1>
-    <p className="text-gray-300 max-w-lg mb-6">
+    <p className="text-gray-400 max-w-lg mb-6">
       Passionate Full-Stack Developer with expertise in React, .NET, and modern web technologies.
       I create efficient, scalable applications and love solving complex problems through code.
     </p>
@@ -49,19 +50,20 @@ const Home = () => (
       </a>
       <a
         href="#contact"
-        className="bg-yellow-400 hover:bg-yellow-300 text-[#222] font-medium rounded-xl transition shadow flex items-center justify-center"
+        className="w-[70%] bg-fuchsia-600 hover:bg-fuchsia-500 text-white font-semibold rounded-xl transition-all duration-300 shadow-[0_0_15px_rgba(192,38,211,0.5)] hover:shadow-[0_0_25px_rgba(192,38,211,0.8)] flex items-center justify-center py-3"
         id="contact-button"
       >
         Contact Me
       </a>
+      
       <a
         href="/files/Manuel-Prosperi-CV-EN.pdf"
         download
-        className="bg-white/10 hover:bg-white/20 text-white font-medium py-3 rounded-xl transition flex items-center justify-center gap-2 border border-gray-400 group overflow-hidden"
+        className="w-[70%] bg-white/5 hover:bg-white/10 text-white font-medium py-3 rounded-xl transition-all duration-300 flex items-center justify-center gap-2 border border-white/20 hover:border-cyan-400 group overflow-hidden hover:shadow-[0_0_15px_rgba(34,211,238,0.3)]"
         id="downloadcv-button"
       >
-        <span className="text-white transition-transform duration-500 group-hover:-translate-x-100">Download CV</span>
-        <MdOutlineFileDownload className="text-2xl text-white transition-transform duration-300 group-hover:-translate-x-13 group-hover:scale-110" />
+        <span className="text-white transition-transform duration-500">Download CV</span>
+        <MdOutlineFileDownload className="text-2xl text-cyan-400 transition-transform duration-300 opacity-0 group-hover:opacity-100 group-hover:-translate-x-2 group-hover:scale-110 absolute right-1 lg:right-24" />
       </a>
     </div>
   </section>

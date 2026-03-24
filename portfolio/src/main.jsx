@@ -15,21 +15,20 @@ const App = () => {
     <>
       <Header />
       <Home />
-      <Divider />
       <Aboutme />
-      <Divider2 />
       <Skills />
-      <Divider />
-      <section id="education-experience" className="flex flex-col items-center lg:flex-row lg:justify-center lg:gap-10">
+      <section id="education-experience" className="flex flex-col lg:flex-row gap-10 
+                                                    items-center w-fit max-w-[95vw] lg:w-full mx-auto bg-white/5 backdrop-blur-lg border 
+                                                    border-white/10 rounded-3xl p-8 md:p-12 shadow-[0_0_40px_rgba(0,0,0,0.3)]
+                                                    lg:justify-center ">
         <Education />
         <Experience />
       </section>
-      <Divider2 />
       <Projects />
-      <Divider />
       <Contact />
     </>
   )
 };
 
 createRoot(document.getElementById('root')).render(<App />);
+// flex flex-col items-center lg:flex-row lg:justify-center lg:gap-10
