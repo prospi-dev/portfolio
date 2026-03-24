@@ -11,14 +11,7 @@
 h1, h2, h3, h4, h5, h6, button, .font-space {
   font-family: 'Space Grotesk', sans-serif;
 }
-#divider{
-    .animate-spin-slow {
-    animation: spin 3s linear infinite;
-  }
-  @keyframes spin {
-    100% { transform: rotate(360deg); }
-  }
-}
+
 #projects-button
 {
   width: 100%;
@@ -106,77 +99,3 @@ scale: 1.2;
     0 0 40px #00c3ff,
     0 0 80px #00c3ff66;
 }
-
-.neon-btn3 {
-  color: #fff;
-  background: transparent;
-  border: 2px solid;
-  border-radius: 8px;
-  cursor: pointer;
-  outline: none;
-  border-image: linear-gradient(90deg, #00c3ff, #39ff14, #ff00c8, #00c3ff) 1;
-  box-shadow:
-    0 0 8px #f1ff28,
-    0 0 16px #f1ff28;
-  animation: neon-border 3s linear infinite;
-  transition: color 0.3s, border-image 0.3s, box-shadow 0.3s;
-}
-
-@keyframes neon-border {
-  0% {
-    border-image: linear-gradient(90deg, #00c3ff, #39ff14, #ff00c8, #00c3ff) 1;
-    box-shadow:
-      0 0 8px #00c3ff,
-      0 0 16px #00c3ff;
-  }
-  33% {
-    border-image: linear-gradient(90deg, #39ff14, #ff00c8, #00c3ff, #39ff14) 1;
-    box-shadow:
-      0 0 8px #39ff14,
-      0 0 16px #39ff14;
-  }
-  66% {
-    border-image: linear-gradient(90deg, #ff00c8, #00c3ff, #39ff14, #ff00c8) 1;
-    box-shadow:
-      0 0 8px #ff00c8,
-      0 0 16px #ff00c8;
-  }
-  100% {
-    border-image: linear-gradient(90deg, #00c3ff, #39ff14, #ff00c8, #00c3ff) 1;
-    box-shadow:
-      0 0 8px #00c3ff,
-      0 0 16px #00c3ff;
-  }
-}
-
-.neon-btn3:hover{
-  color: #00FFC3;
-}
-
-@keyframes neon-border {
-  0% {
-    border-image: linear-gradient(90deg, #00c3ff, #39ff14, #ff00c8, #00c3ff) 1;
-  }
-  33% {
-    border-image: linear-gradient(90deg, #39ff14, #ff00c8, #00c3ff, #39ff14) 1;
-  }
-  66% {
-    border-image: linear-gradient(90deg, #ff00c8, #00c3ff, #39ff14, #ff00c8) 1;
-  }
-  100% {
-    border-image: linear-gradient(90deg, #00c3ff, #39ff14, #ff00c8, #00c3ff) 1;
-  }
-}
-
-.neon-hover:hover {
-  border: 1px solid;
-  border-radius: 0.5rem;
-  border-image: linear-gradient(90deg, #00c3ff, #39ff14, #ff00c8, #00c3ff) 1;
-  animation: neon-border 3s linear infinite;
-  outline: none;
-}
-
-@media screen and (min-width: 1024px) {
-
-}
-
