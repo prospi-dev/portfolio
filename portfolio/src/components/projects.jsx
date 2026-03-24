@@ -1,23 +1,23 @@
 import { FaReact, FaGithub, FaExternalLinkAlt, FaEye } from "react-icons/fa";
 import { SiDotnet, SiTailwindcss, SiJavascript } from "react-icons/si";
 import { BiServer } from "react-icons/bi";
-import ScoreHubImage from '../assets/images/scorehub.png';
+import FitTrackImage from '../assets/images/FitTrack-landing_page.png';
 import { motion } from "framer-motion";
 
 const projectsData = [
     {
         id: 1,
-        title: "ScoreHub",
-        description: "A comprehensive football match information platform that integrates with a local API to display real-time match schedules, team information, and detailed player statistics. Features responsive design and intuitive user interface.",
-        image: ScoreHubImage,
+        title: "FitTrack",
+        description: "A full-stack training management application that allows users to create workout routines, log training sessions, and track their strength progress over time.",
+        image: FitTrackImage,
         technologies: [
             { name: "React", icon: <FaReact className="text-cyan-400" />, color: "cyan" },
             { name: ".NET API", icon: <SiDotnet className="text-blue-400" />, color: "blue" },
-            { name: "SQL Server", icon: <BiServer className="text-gray-300" />, color: "gray" },
+            { name: "PostgreSQL", icon: <BiServer className="text-gray-300" />, color: "gray" },
             { name: "JavaScript", icon: <SiJavascript className="text-yellow-400" />, color: "yellow" },
         ],
-        github: "https://github.com/prospi-dev/scorehub",
-        demo: null,
+        github: "https://github.com/prospi-dev/FitTrack",
+        demo: "https://fittrack-prospi.netlify.app/",
         featured: true
     },
 ];
@@ -54,22 +54,7 @@ const Projects = () => (
             <h2 className="text-3xl lg:text-4xl font-bold mb-12 text-center bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
                 Featured Projects
             </h2>
-            <motion.div
-                className="flex flex-col items-center justify-center py-16 px-8"
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: true }}
-            >
-                <div className="text-6xl mb-6">🚧</div>
-                <h3 className="text-2xl lg:text-3xl font-bold text-cyan-400 drop-shadow-[0_0_8px_rgba(34,211,238,0.5)] mb-4 text-center">
-                    Working on New Projects
-                </h3>
-                <p className="text-gray-300 text-lg text-center max-w-md">
-                    I'm currently building new exciting projects. Check back soon to see what I've been working on!
-                </p>
-            </motion.div>
-            {/* <motion.div 
+             <motion.div 
                 className="grid gap-8 md:gap-12"
                 variants={containerVariants}
                 initial="hidden"
@@ -139,7 +124,7 @@ const Projects = () => (
                                 {project.technologies.map((tech) => (
                                     <span
                                         key={tech.name}
-                                        className="flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm border border-white/20 hover:bg-white/20 hover:scale-105 transition-all duration-300"
+                                        className="flex items-center gap-2 bg-white/5 backdrop-blur-md text-white px-4 py-2 rounded-full text-sm border border-white/10 hover:border-cyan-400/50 hover:bg-white/10 hover:shadow-[0_0_15px_rgba(34,211,238,0.4)] hover:-translate-y-1 transition-all duration-300 cursor-default"
                                     >
                                         <span className="text-lg">{tech.icon}</span>
                                         {tech.name}
@@ -172,7 +157,7 @@ const Projects = () => (
                         </div>
                     </motion.div>
                 ))}
-            </motion.div> */}
+            </motion.div> 
         </div>
     </motion.section>
 );

@@ -1,5 +1,4 @@
 import React from 'react';
-import { MdOutlineFileDownload } from "react-icons/md";
 import { FaGithub, FaLinkedin, FaArrowRight } from "react-icons/fa";
 import '../index.css'
 
@@ -40,7 +39,7 @@ const Home = () => (
         <FaLinkedin className="text-3xl text-white" />
       </a>
     </div>
-    <div className="home-button_container flex flex-col gap-4 items-center lg:max-w-xl">
+    <div className="home-button_container flex flex-col md:flex-row md:flex-wrap gap-4 justify-center items-center w-full max-w-2xl mt-4">
       <a
         href="#projects"
         className="neon-btn3 flex items-center justify-center gap-2 shadow group overflow-hidden"
@@ -63,7 +62,6 @@ const Home = () => (
         id="downloadcv-button"
       >
         <span className="text-white transition-transform duration-500">Download CV</span>
-        <MdOutlineFileDownload className="text-2xl text-cyan-400 transition-transform duration-300 opacity-0 group-hover:opacity-100 group-hover:-translate-x-2 group-hover:scale-110 absolute right-1 lg:right-24" />
       </a>
     </div>
   </section>

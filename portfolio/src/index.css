@@ -1,12 +1,16 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
 
 :root {
   color-scheme: light dark;
   color: #eee;
   background: radial-gradient(ellipse at bottom, #031926 0%, #090a0f 100%);
+  font-family: 'Inter', sans-serif; 
 }
 
-
+h1, h2, h3, h4, h5, h6, button, .font-space {
+  font-family: 'Space Grotesk', sans-serif;
+}
 #divider{
     .animate-spin-slow {
     animation: spin 3s linear infinite;
