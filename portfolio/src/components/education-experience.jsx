@@ -99,7 +99,7 @@ const Education = () => (
 const Experience = () => (
   <motion.section 
     id="experience"
-    className="py-8 flex flex-col items-center max-w-lg mx-auto"
+    className="py-8 flex flex-col items-center mx-auto"
     initial={{ opacity: 0, x: 50 }}
     whileInView={{ opacity: 1, x: 0 }}
     transition={{ duration: 0.7, ease: "easeOut" }}
@@ -119,7 +119,7 @@ const Experience = () => (
       transition={{ duration: 0.6, delay: 0.2 }}
       viewport={{ once: true }}
     >
-      <div className="bg-white/10 backdrop-blur-sm border border-yellow-400/50 rounded-xl p-6 text-left hover:bg-white/15 transition-all duration-300 hover:scale-105 shadow-lg w-xs lg:w-max">
+      <div className="bg-white/10 backdrop-blur-sm border border-yellow-400/50 rounded-xl p-6 text-left hover:bg-white/15 transition-all duration-300 hover:scale-105 shadow-lg w-xs lg:w-full">
         <div className="flex items-start gap-3 mb-4">
           <FaBriefcase className="text-yellow-400 text-xl mt-1 flex-shrink-0" />
           <div className="flex-1">
