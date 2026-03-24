@@ -106,11 +106,11 @@ const Projects = () => (
                         </div>
                         <div className="flex-1 text-center lg:text-left">
                             <div className="flex items-center gap-3 mb-4 justify-center lg:justify-start">
-                                <h3 className="text-2xl lg:text-3xl font-bold text-yellow-400">
+                                <h3 className="text-2xl lg:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-fuchsia-600 drop-shadow-[0_0_8px_rgba(192,38,211,0.5)]">
                                     {project.title}
                                 </h3>
                                 {project.featured && (
-                                    <span className="px-3 py-1 bg-yellow-400/20 text-yellow-400 text-xs font-medium rounded-full border border-yellow-400/30">
+                                    <span className="px-3 py-1 bg-cyan-400/10 text-cyan-400 text-xs font-medium rounded-full border border-cyan-400/30 shadow-[0_0_10px_rgba(34,211,238,0.2)]">
                                         Featured
                                     </span>
                                 )}
@@ -147,7 +147,7 @@ const Projects = () => (
                                         href={project.demo}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="flex items-center gap-2 bg-yellow-400 hover:bg-yellow-300 text-black font-medium px-6 py-3 rounded-xl transition-all duration-300 hover:scale-105"
+                                        className="flex items-center gap-2 bg-fuchsia-600 hover:bg-fuchsia-500 text-white font-medium px-6 py-3 rounded-xl transition-all duration-300 hover:scale-105 shadow-[0_0_15px_rgba(192,38,211,0.5)] hover:shadow-[0_0_25px_rgba(192,38,211,0.8)]"
                                     >
                                         <FaEye className="text-lg" />
                                         Live Demo
