@@ -4,15 +4,14 @@ import profileImg from '../assets/images/manuel-prosperi.jpg'
 
 const AboutMe = () => (
   <section id="about" className="py-16 px-4 scroll-mt-20">
-    <div className="max-w-4xl mx-auto">
-      <motion.div 
-        className="flex flex-col items-center justify-center text-center lg:flex-row lg:gap-12 lg:text-left" 
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: 40 }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
-        viewport={{ once: true, amount: 0.3 }}
-      >
+    <motion.div
+      className="max-w-4xl mx-auto bg-white/5 backdrop-blur-lg border border-white/10 rounded-3xl p-8 md:p-12 shadow-[0_0_40px_rgba(0,0,0,0.3)]"
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: 40 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      viewport={{ once: true, amount: 0.3 }}>
+      <div className="flex flex-col items-center justify-center text-center lg:flex-row lg:gap-12 lg:text-left">
         <div className="relative mb-8 lg:mb-0 lg:flex-shrink-0">
           <div className="w-48 h-48 lg:w-64 lg:h-64 rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-cyan-400/20 to-blue-600/20 p-1">
             <img
@@ -35,7 +34,7 @@ const AboutMe = () => (
               <span className="text-teal-400 font-semibold">web development</span>.
             </p>
             <p>
-              I love programming because it's all about solving problems and constantly learning new things. 
+              I love programming because it's all about solving problems and constantly learning new things.
               Right now, I'm focused on growing as a{" "}
               <span className="text-yellow-300 font-semibold">Full-Stack Developer</span>, mainly working with technologies like{" "}
               <span className="text-blue-400 font-semibold">React</span> and{" "}
@@ -45,10 +44,10 @@ const AboutMe = () => (
               When I'm not coding, you'll probably find me playing video games or watching football.
             </p>
           </div>
-        
+
         </div>
-      </motion.div>
-    </div>
+      </div>
+    </motion.div>
   </section>
 );
 
