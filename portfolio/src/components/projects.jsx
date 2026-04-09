@@ -8,7 +8,7 @@ const projectsData = [
     {
         id: 1,
         title: "FitTrack",
-        description: "A full-stack training management application that allows users to create workout routines, log training sessions, and track their strength progress over time.",
+        description: "A full-stack training management application that allows users to create workout routines, log training sessions, and track their strength progress over time. (Note: The live demo is currently unavailable because the free backend hosting plan expired. I am working on a solution to redeploy it soon!)",
         image: FitTrackImage,
         technologies: [
             { name: "React", icon: <FaReact className="text-cyan-400" />, color: "cyan" },
