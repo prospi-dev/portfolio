@@ -23,6 +23,8 @@ I’m a passionate Full-Stack Developer with experience in React, .NET, SQL, and
 
 🔗 **Live demo:** [https://fittrack-prospi.netlify.app](https://fittrack-prospi.netlify.app)
 
+> ⚠️ **Note:** The live demo is currently unavailable because the free backend hosting plan expired. I am working on a solution to redeploy it soon!
+
 ---
 
 ## 🛠️ Skills
