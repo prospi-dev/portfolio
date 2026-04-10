@@ -2,6 +2,7 @@ import { FaReact, FaGithub, FaExternalLinkAlt, FaEye } from "react-icons/fa";
 import { SiDotnet, SiTailwindcss, SiJavascript } from "react-icons/si";
 import { BiServer } from "react-icons/bi";
 import FitTrackImage from '../assets/images/FitTrack-landing_page.png';
+import BeatHubImage from '../assets/images/BeatHub-landing_page.png';
 import { motion } from "framer-motion";
 
 const projectsData = [
@@ -20,6 +21,21 @@ const projectsData = [
         demo: "https://fittrack-prospi.netlify.app/",
         featured: true
     },
+    {
+        id: 2,
+        title: "BeatHub",
+        description: "BeatHub is a full-stack, community-driven platform built for music lovers to discover, rate, and discuss their favorite albums, tracks, and artists. Think of it as \"Letterboxd for Music\", powered by the vast Spotify catalog.", 
+        image: BeatHubImage,
+        technologies: [
+            { name: "React", icon: <FaReact className="text-cyan-400" />, color: "cyan" },
+            { name: ".NET API", icon: <SiDotnet className="text-blue-400" />, color: "blue" },
+            { name: "PostgreSQL", icon: <BiServer className="text-gray-300" />, color: "gray" },
+            { name: "JavaScript", icon: <SiJavascript className="text-yellow-400" />, color: "yellow" },
+        ],
+        github: "https://github.com/prospi-dev/BeatHub",
+        demo: "https://beathub-prospi.netlify.app/",
+        featured: true
+    }
 ];
 
 const containerVariants = {
@@ -54,20 +70,19 @@ const Projects = () => (
             <h2 className="text-3xl lg:text-4xl font-bold mb-12 text-center bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
                 Featured Projects
             </h2>
-             <motion.div 
+            <motion.div
                 className="grid gap-8 md:gap-12"
                 variants={containerVariants}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
             >
-               {projectsData.map((project, index) => (
+                {projectsData.map((project, index) => (
                     <motion.div
                         key={project.id}
                         variants={itemVariants}
-                        className={`flex flex-col lg:flex-row gap-8 items-center ${
-                            index % 2 === 1 ? 'lg:flex-row-reverse' : ''
-                        }`}
+                        className={`flex flex-col lg:flex-row gap-8 items-center ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''
+                            }`}
                     >
                         <div className="flex-1 group">
                             <div className="relative overflow-hidden rounded-xl shadow-2xl">
@@ -77,7 +92,7 @@ const Projects = () => (
                                     className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                                 
+
                                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                     <div className="flex gap-4">
                                         <a
@@ -115,11 +130,11 @@ const Projects = () => (
                                     </span>
                                 )}
                             </div>
-                            
+
                             <p className="text-gray-300 text-lg leading-relaxed mb-6">
                                 {project.description}
                             </p>
-                        
+
                             <div className="flex flex-wrap gap-3 mb-6 justify-center lg:justify-start">
                                 {project.technologies.map((tech) => (
                                     <span
@@ -157,7 +172,7 @@ const Projects = () => (
                         </div>
                     </motion.div>
                 ))}
-            </motion.div> 
+            </motion.div>
         </div>
     </motion.section>
 );
