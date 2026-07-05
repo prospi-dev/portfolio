@@ -55,7 +55,7 @@ const Skills = () => {
                     ))}
                 </motion.div>
                 <div className="flex flex-col items-center">
-                    <h3 className="text-2xl font-semibold mb-8 mt-10 text-yellow-400">
+                    <h3 className="text-2xl font-semibold mb-8 mt-10 text-cyan-400">
                         {techOptions.find(t => t.key === selected).label}
                     </h3>
                     <div className="relative w-full max-w-2xl flex items-center">
@@ -67,7 +67,7 @@ const Skills = () => {
                                     onClick={() => setSelected(tech.key)}
                                     className={`bg-white flex items-center justify-center rounded-full border-2 transition-all duration-300 hover:scale-110
                                         ${selected === tech.key
-                                            ? "border-yellow-400 scale-110 shadow-lg shadow-yellow-400/20"
+                                            ? "border-cyan-400 scale-110 shadow-lg shadow-cyan-400/20"
                                             : "border-white/30 scale-90 opacity-70 hover:opacity-100"}
                                         w-10 h-10 md:w-14 md:h-14`}
                                     aria-label={tech.label}

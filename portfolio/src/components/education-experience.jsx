@@ -32,8 +32,8 @@ const Education = () => (
     viewport={{ once: true, amount: 0.3 }}
   >
     <div className="flex items-center gap-3 mb-8">
-      <FaGraduationCap className="text-3xl text-green-400" />
-      <h2 className="text-2xl lg:text-3xl text-green-400 font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text">
+      <FaGraduationCap className="text-3xl text-fuchsia-400" />
+      <h2 className="text-2xl lg:text-3xl font-bold bg-gradient-to-r from-fuchsia-400 to-fuchsia-600 bg-clip-text text-transparent">
         Education
       </h2>
     </div>
@@ -50,12 +50,12 @@ const Education = () => (
           <TimelineCard
             icon={item.icon}
             iconColor={item.iconColor}
-            borderColor="border-blue-400/50"
+            borderColor="border-fuchsia-400/50"
             title={item.title}
             subtitle={item.institution}
             location={item.location}
             date={item.date}
-            accentColor="text-blue-400"
+            accentColor="text-fuchsia-400"
           />
         </motion.div>
       ))}
@@ -73,8 +73,8 @@ const Experience = () => (
     viewport={{ once: true, amount: 0.3 }}
   >
     <div className="flex items-center gap-3 mb-8">
-      <FaBriefcase className="text-3xl text-yellow-400" />
-      <h2 className="text-2xl lg:text-3xl font-bold bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
+      <FaBriefcase className="text-3xl text-cyan-400" />
+      <h2 className="text-2xl lg:text-3xl font-bold bg-gradient-to-r from-cyan-400 to-cyan-600 bg-clip-text text-transparent">
         Experience
       </h2>
     </div>
@@ -90,16 +90,16 @@ const Experience = () => (
         <TimelineCard
           key={item.company}
           icon={item.icon}
-          iconColor="text-yellow-400"
-          borderColor="border-yellow-400/50"
+          iconColor="text-cyan-400"
+          borderColor="border-cyan-400/50"
           title={item.company}
-          titleClassName="text-yellow-300 font-bold text-xl mb-1"
+          titleClassName="text-gray-100 font-bold text-xl mb-1"
           subtitle={item.role}
           subtitleClassName={`text-cyan-300 font-semibold text-lg ${item.summary ? "mb-1" : "mb-3"}`}
           summary={item.summary}
           responsibilities={item.responsibilities}
           techStack={item.techStack}
-          accentColor="text-yellow-400"
+          accentColor="text-cyan-400"
           location={item.location}
           date={item.date}
           fullWidth

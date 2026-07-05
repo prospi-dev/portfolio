@@ -3,7 +3,7 @@ import { FaGraduationCap, FaCertificate, FaBriefcase } from "react-icons/fa";
 export const educationData = [
     {
         icon: FaCertificate,
-        iconColor: "text-yellow-400",
+        iconColor: "text-fuchsia-400",
         title: "English Certificate Level B2",
         institution: "IES Martín Miranda",
         location: "Spain",
@@ -11,7 +11,7 @@ export const educationData = [
     },
     {
         icon: FaGraduationCap,
-        iconColor: "text-blue-400",
+        iconColor: "text-fuchsia-400",
         title: "Higher National Diploma in Web Application Development",
         institution: "CIFP César Manrique",
         location: "Spain",
