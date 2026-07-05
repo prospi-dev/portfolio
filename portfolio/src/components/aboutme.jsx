@@ -16,6 +16,10 @@ const AboutMe = () => (
             <img
               src={profileImg}
               alt="Manuel Prosperi - Full Stack Developer"
+              loading="lazy"
+              decoding="async"
+              width="256"
+              height="256"
               className="w-full h-full object-cover rounded-xl"
             />
           </div>

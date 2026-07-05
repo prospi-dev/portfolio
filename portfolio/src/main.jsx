@@ -1,4 +1,4 @@
-import { StrictMode } from 'react'
+import { StrictMode, Suspense, lazy } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import Header from './components/header.jsx'
@@ -8,13 +8,16 @@ import { Education, Experience } from './components/education-experience.jsx'
 import Skills from './components/skills.jsx'
 import Contact from './components/contactme.jsx'
 import Projects from './components/projects.jsx'
-import ParticlesBackground from './components/particlesBackground';
+
+const ParticlesBackground = lazy(() => import('./components/particlesBackground.jsx'));
 
 const App = () => {
 
   return (
     <>
-      <ParticlesBackground />
+      <Suspense fallback={null}>
+        <ParticlesBackground />
+      </Suspense>
       <Header />
       <main className="flex flex-col gap-24 md:gap-20 pt-20 pb-24 overflow-x-hidden">
         <Home />
