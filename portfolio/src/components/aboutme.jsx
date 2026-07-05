@@ -30,18 +30,16 @@ const AboutMe = () => (
           </h2>
           <div className="space-y-4 text-gray-300 text-lg leading-relaxed">
             <p>
-              I've been surrounded by computers since I was a kid, and that curiosity about how things work eventually led me to{" "}
-              <span className="text-teal-400 font-semibold">web development</span>.
+              I'm a{" "}
+              <span className="text-yellow-300 font-semibold">Full Stack Developer</span> specializing in backend architecture with{" "}
+              <span className="text-teal-400 font-semibold">Java and Spring Boot</span>, and in building dynamic interfaces with{" "}
+              <span className="text-cyan-400 font-semibold">Vue.js 3</span>.
             </p>
             <p>
-              I love programming because it's all about solving problems and constantly learning new things.
-              Right now, I'm focused on growing as a{" "}
-              <span className="text-yellow-300 font-semibold">Full-Stack Developer</span>, mainly working with technologies like{" "}
-              <span className="text-blue-400 font-semibold">React</span> and{" "}
-              <span className="text-cyan-400 font-semibold">.NET</span>.
+              I currently lead the backend area for <span className="text-blue-400 font-semibold">Domitila</span>, a corporate ERP system for HR management and social projects, setting architecture, security, and code quality standards for a 5-person development team.
             </p>
             <p>
-              When I'm not coding, you'll probably find me playing video games or watching football.
+              I complement this experience with independent, end-to-end software development in the .NET/React ecosystem, demonstrating command of core backend fundamentals independently of the framework.
             </p>
           </div>
 
