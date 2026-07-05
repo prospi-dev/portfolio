@@ -8,16 +8,11 @@ const ParticlesBackground = () => {
     await loadSlim(engine);
   }, []);
 
-  const particlesLoaded = useCallback(async (container) => {
-    // console.log(container); // Optional for debugging
-  }, []);
-
   return (
     <Particles
       id="tsparticles"
       init={particlesInit}
-      loaded={particlesLoaded}
-      className="fixed inset-0 -z-10 pointer-events-none" // Tailwind to set it as an absolute background
+      className="fixed inset-0 -z-10 pointer-events-none"
       options={{
         background: {
           color: {

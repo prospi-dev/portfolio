@@ -1,4 +1,3 @@
-import React from 'react'
 import { motion } from "framer-motion";
 import profileImg from '../assets/images/manuel-prosperi.jpg'
 

@@ -1,10 +1,9 @@
-import React from 'react'
 import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin, FaArrowRight, FaPhone, FaMapMarkerAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import ContactForm from './contactForm';
 
-const contactme = () => {
+const ContactMe = () => {
     return (
         <footer>
             <motion.section
@@ -133,4 +132,4 @@ const contactme = () => {
     )
 }
 
-export default contactme
+export default ContactMe

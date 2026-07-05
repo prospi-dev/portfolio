@@ -1,4 +1,3 @@
-import React from 'react';
 import { FaGithub, FaLinkedin, FaArrowRight } from "react-icons/fa";
 import '../index.css'
 
@@ -26,7 +25,7 @@ const Home = () => (
         href="https://github.com/prospi-dev"
         target="_blank"
         rel="noopener noreferrer"
-        className="neon-btn p-3transition hover:scale-110"
+        className="neon-btn p-3 transition hover:scale-110"
         aria-label="GitHub"
       >
         <FaGithub className="text-3xl text-white" />
@@ -35,7 +34,7 @@ const Home = () => (
         href="https://www.linkedin.com/in/manuel-prosperi-664425274/"
         target="_blank"
         rel="noopener noreferrer"
-        className="neon-btn2 p-3transition hover:scale-110"
+        className="neon-btn2 p-3 transition hover:scale-110"
         aria-label="LinkedIn"
       >
         <FaLinkedin className="text-3xl text-white" />
