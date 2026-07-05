@@ -1,5 +1,5 @@
-import { FaReact, FaGithub, FaExternalLinkAlt, FaEye } from "react-icons/fa";
-import { SiDotnet, SiTailwindcss, SiJavascript } from "react-icons/si";
+import { FaReact, FaGithub, FaExternalLinkAlt, FaEye, FaLock } from "react-icons/fa";
+import { SiDotnet, SiJsonwebtokens, SiSpotify, SiCloudinary, SiOpenjdk, SiSpringboot, SiHibernate, SiMysql, SiVuedotjs, SiDocker } from "react-icons/si";
 import { BiServer } from "react-icons/bi";
 import FitTrackImage from '../assets/images/FitTrack-landing_page.png';
 import BeatHubImage from '../assets/images/BeatHub-landing_page.png';
@@ -9,13 +9,14 @@ const projectsData = [
     {
         id: 1,
         title: "FitTrack",
-        description: "A full-stack training management application that allows users to create workout routines, log training sessions, and track their strength progress over time. (Note: The live demo is currently unavailable because the free backend hosting plan expired. I am working on a solution to redeploy it soon!)",
+        description: "A full-stack training management application for creating workout routines, logging sessions, and tracking strength progression. Features JWT authentication with BCrypt hashing, an exercise catalogue with a user request/admin approval flow, and a custom admin panel.",
         image: FitTrackImage,
         technologies: [
-            { name: "React", icon: <FaReact className="text-cyan-400" />, color: "cyan" },
-            { name: ".NET API", icon: <SiDotnet className="text-blue-400" />, color: "blue" },
+            { name: "React 19", icon: <FaReact className="text-cyan-400" />, color: "cyan" },
+            { name: "ASP.NET Core 9", icon: <SiDotnet className="text-blue-400" />, color: "blue" },
+            { name: "Entity Framework Core", icon: <BiServer className="text-gray-300" />, color: "gray" },
             { name: "PostgreSQL", icon: <BiServer className="text-gray-300" />, color: "gray" },
-            { name: "JavaScript", icon: <SiJavascript className="text-yellow-400" />, color: "yellow" },
+            { name: "JWT", icon: <SiJsonwebtokens className="text-pink-400" />, color: "pink" },
         ],
         github: "https://github.com/prospi-dev/FitTrack",
         demo: "https://fittrack-prospi.netlify.app/",
@@ -24,17 +25,38 @@ const projectsData = [
     {
         id: 2,
         title: "BeatHub",
-        description: "BeatHub is a full-stack, community-driven platform built for music lovers to discover, rate, and discuss their favorite albums, tracks, and artists. Think of it as \"Letterboxd for Music\", powered by the vast Spotify catalog.", 
+        description: "A community-driven music discovery platform integrated with the Spotify API (\"Letterboxd for Music\"). Includes a full social system (followers, activity feed), custom JWT authentication, and Cloudinary-powered image uploads. Uses Axios interceptors for session renewal/expiration and custom debounce hooks to optimize calls to the external API.",
         image: BeatHubImage,
         technologies: [
             { name: "React", icon: <FaReact className="text-cyan-400" />, color: "cyan" },
-            { name: ".NET API", icon: <SiDotnet className="text-blue-400" />, color: "blue" },
+            { name: ".NET 8", icon: <SiDotnet className="text-blue-400" />, color: "blue" },
+            { name: "Entity Framework Core", icon: <BiServer className="text-gray-300" />, color: "gray" },
             { name: "PostgreSQL", icon: <BiServer className="text-gray-300" />, color: "gray" },
-            { name: "JavaScript", icon: <SiJavascript className="text-yellow-400" />, color: "yellow" },
+            { name: "Spotify API", icon: <SiSpotify className="text-green-400" />, color: "green" },
+            { name: "Cloudinary", icon: <SiCloudinary className="text-sky-400" />, color: "sky" },
         ],
         github: "https://github.com/prospi-dev/BeatHub",
         demo: "https://beathub-prospi.netlify.app/",
         featured: true
+    },
+    {
+        id: 3,
+        title: "Domitila",
+        description: "Corporate ERP system for HR management and social projects. Designed a 15+ table MySQL relational schema with engine-level business logic (triggers, computed fields) and a custom security architecture built with Spring Security + JWT.",
+        image: null,
+        technologies: [
+            { name: "Java", icon: <SiOpenjdk className="text-orange-400" />, color: "orange" },
+            { name: "Spring Boot", icon: <SiSpringboot className="text-green-400" />, color: "green" },
+            { name: "JPA/Hibernate", icon: <SiHibernate className="text-yellow-600" />, color: "yellow" },
+            { name: "MySQL", icon: <SiMysql className="text-blue-500" />, color: "blue" },
+            { name: "Vue.js 3", icon: <SiVuedotjs className="text-emerald-400" />, color: "emerald" },
+            { name: "Pinia", icon: <SiVuedotjs className="text-yellow-400" />, color: "yellow" },
+            { name: "Docker", icon: <SiDocker className="text-blue-400" />, color: "blue" },
+        ],
+        github: null,
+        demo: null,
+        featured: true,
+        private: true
     }
 ];
 
@@ -86,24 +108,33 @@ const Projects = () => (
                     >
                         <div className="flex-1 group">
                             <div className="relative overflow-hidden rounded-xl shadow-2xl">
-                                <img
-                                    src={project.image}
-                                    alt={`${project.title} Screenshot`}
-                                    className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
-                                />
+                                {project.image ? (
+                                    <img
+                                        src={project.image}
+                                        alt={`${project.title} Screenshot`}
+                                        className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
+                                    />
+                                ) : (
+                                    <div className="w-full aspect-video flex flex-col items-center justify-center gap-3 bg-white/5 border border-white/10">
+                                        <FaLock className="text-4xl text-gray-500" />
+                                        <span className="text-gray-400 text-sm">Private corporate repository</span>
+                                    </div>
+                                )}
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
                                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                     <div className="flex gap-4">
-                                        <a
-                                            href={project.github}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="bg-white/20 backdrop-blur-sm p-3 rounded-full hover:bg-white/30 transition-all hover:scale-110"
-                                            aria-label="View GitHub Repository"
-                                        >
-                                            <FaGithub className="text-white text-xl" />
-                                        </a>
+                                        {project.github && (
+                                            <a
+                                                href={project.github}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="bg-white/20 backdrop-blur-sm p-3 rounded-full hover:bg-white/30 transition-all hover:scale-110"
+                                                aria-label="View GitHub Repository"
+                                            >
+                                                <FaGithub className="text-white text-xl" />
+                                            </a>
+                                        )}
                                         {project.demo && (
                                             <a
                                                 href={project.demo}
@@ -129,6 +160,12 @@ const Projects = () => (
                                         Featured
                                     </span>
                                 )}
+                                {project.private && (
+                                    <span className="px-3 py-1 bg-gray-400/10 text-gray-300 text-xs font-medium rounded-full border border-gray-400/30 flex items-center gap-1">
+                                        <FaLock className="text-[10px]" />
+                                        Professional Project
+                                    </span>
+                                )}
                             </div>
 
                             <p className="text-gray-300 text-lg leading-relaxed mb-6">
@@ -148,15 +185,22 @@ const Projects = () => (
                             </div>
 
                             <div className="flex gap-4 justify-center lg:justify-start">
-                                <a
-                                    href={project.github}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white font-medium px-6 py-3 rounded-xl transition-all duration-300 hover:scale-105 border border-white/20"
-                                >
-                                    <FaGithub className="text-lg" />
-                                    View Code
-                                </a>
+                                {project.github ? (
+                                    <a
+                                        href={project.github}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white font-medium px-6 py-3 rounded-xl transition-all duration-300 hover:scale-105 border border-white/20"
+                                    >
+                                        <FaGithub className="text-lg" />
+                                        View Code
+                                    </a>
+                                ) : (
+                                    <span className="flex items-center gap-2 bg-white/5 text-gray-400 font-medium px-6 py-3 rounded-xl border border-white/10">
+                                        <FaLock className="text-lg" />
+                                        Private Repository
+                                    </span>
+                                )}
                                 {project.demo && (
                                     <a
                                         href={project.demo}
