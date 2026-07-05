@@ -1,31 +1,69 @@
 import { useState } from "react";
-import { FaLaptopCode, FaCog, FaTools } from "react-icons/fa";
-import { FaReact, FaGithub } from "react-icons/fa";
-import { SiJavascript, SiSpring, SiFigma, SiDotnet, SiHtml5, SiCss3, SiTailwindcss, SiMysql } from "react-icons/si";
+import { FaCode, FaServer, FaLaptopCode, FaDatabase, FaShieldAlt, FaTools, FaReact, FaGithub, FaKey } from "react-icons/fa";
+import { TbBrandCSharp } from "react-icons/tb";
+import {
+    SiJavascript,
+    SiMysql,
+    SiSpringboot,
+    SiSpringsecurity,
+    SiHibernate,
+    SiDotnet,
+    SiVuedotjs,
+    SiTailwindcss,
+    SiPostgresql,
+    SiJsonwebtokens,
+    SiDocker,
+    SiGit,
+    SiRender,
+    SiNetlify,
+    SiOpenjdk,
+} from "react-icons/si";
 import { motion } from "framer-motion";
 
 const techOptions = [
-    { key: "frontend", icon: <FaLaptopCode size={32} />, label: "Frontend" },
-    { key: "backend", icon: <FaCog size={32} />, label: "Backend" },
-    { key: "tools", icon: <FaTools size={32} />, label: "Tools" },
+    { key: "languages", icon: <FaCode size={20} />, label: "Languages" },
+    { key: "backend", icon: <FaServer size={20} />, label: "Backend / Frameworks" },
+    { key: "frontend", icon: <FaLaptopCode size={20} />, label: "Frontend" },
+    { key: "databases", icon: <FaDatabase size={20} />, label: "Databases" },
+    { key: "security", icon: <FaShieldAlt size={20} />, label: "Security & Auth" },
+    { key: "tools", icon: <FaTools size={20} />, label: "DevOps / Tools" },
 ];
 
 const skillsByTech = {
-    frontend: [
-        { icon: <FaReact className="text-cyan-400 text-3xl md:text-4xl" />, label: "React" },
+    languages: [
+        { icon: <SiOpenjdk className="text-orange-400 text-3xl md:text-4xl" />, label: "Java" },
         { icon: <SiJavascript className="text-yellow-300 text-3xl md:text-4xl" />, label: "JavaScript" },
-        { icon: <SiHtml5 className="text-orange-400 text-3xl md:text-4xl" />, label: "HTML5" },
-        { icon: <SiCss3 className="text-blue-400 text-3xl md:text-4xl" />, label: "CSS3" },
-        { icon: <SiTailwindcss className="text-teal-400 text-3xl md:text-4xl" />, label: "Tailwind" },
+        { icon: <FaDatabase className="text-blue-400 text-3xl md:text-4xl" />, label: "SQL" },
+        { icon: <TbBrandCSharp className="text-purple-400 text-3xl md:text-4xl" />, label: "C#" },
     ],
     backend: [
-        { icon: <SiDotnet className="text-sky-400 text-3xl md:text-4xl" />, label: ".NET" },
-        { icon: <SiSpring className="text-green-400 text-3xl md:text-4xl" />, label: "Spring" },
+        { icon: <SiSpringboot className="text-green-400 text-3xl md:text-4xl" />, label: "Spring Boot" },
+        { icon: <SiSpringsecurity className="text-green-500 text-3xl md:text-4xl" />, label: "Spring Security" },
+        { icon: <SiHibernate className="text-yellow-600 text-3xl md:text-4xl" />, label: "JPA/Hibernate" },
+        { icon: <SiDotnet className="text-sky-400 text-3xl md:text-4xl" />, label: "ASP.NET Core" },
+        { icon: <SiDotnet className="text-purple-400 text-3xl md:text-4xl" />, label: "Entity Framework Core" },
+    ],
+    frontend: [
+        { icon: <SiVuedotjs className="text-emerald-400 text-3xl md:text-4xl" />, label: "Vue.js 3" },
+        { icon: <SiVuedotjs className="text-yellow-400 text-3xl md:text-4xl" />, label: "Pinia" },
+        { icon: <FaReact className="text-cyan-400 text-3xl md:text-4xl" />, label: "React" },
+        { icon: <SiTailwindcss className="text-teal-400 text-3xl md:text-4xl" />, label: "Tailwind CSS" },
+    ],
+    databases: [
         { icon: <SiMysql className="text-blue-500 text-3xl md:text-4xl" />, label: "MySQL" },
+        { icon: <SiPostgresql className="text-sky-400 text-3xl md:text-4xl" />, label: "PostgreSQL" },
+        { icon: <FaDatabase className="text-red-400 text-3xl md:text-4xl" />, label: "SQL Server" },
+    ],
+    security: [
+        { icon: <SiJsonwebtokens className="text-pink-400 text-3xl md:text-4xl" />, label: "JWT" },
+        { icon: <FaKey className="text-yellow-400 text-3xl md:text-4xl" />, label: "BCrypt" },
     ],
     tools: [
+        { icon: <SiDocker className="text-blue-400 text-3xl md:text-4xl" />, label: "Docker" },
+        { icon: <SiGit className="text-orange-500 text-3xl md:text-4xl" />, label: "Git" },
         { icon: <FaGithub className="text-gray-200 text-3xl md:text-4xl" />, label: "GitHub" },
-        { icon: <SiFigma className="text-pink-400 text-3xl md:text-4xl" />, label: "Figma" },
+        { icon: <SiRender className="text-emerald-400 text-3xl md:text-4xl" />, label: "Render" },
+        { icon: <SiNetlify className="text-teal-400 text-3xl md:text-4xl" />, label: "Netlify" },
     ],
 };
 
@@ -44,7 +82,7 @@ const item = {
 };
 
 const Skills = () => {
-    const [selected, setSelected] = useState("frontend");
+    const [selected, setSelected] = useState("languages");
 
     return (
         <motion.section
@@ -85,7 +123,7 @@ const Skills = () => {
                     <h3 className="text-2xl font-semibold mb-8 mt-10 text-yellow-400">
                         {techOptions.find(t => t.key === selected).label}
                     </h3>
-                    <div className="relative w-full max-w-md flex items-center">
+                    <div className="relative w-full max-w-2xl flex items-center">
                         <div className="absolute left-0 right-0 top-1/2 h-1 -translate-y-1/2 bg-white/30 rounded-full" />
                         <div className="w-full flex justify-between z-10">
                             {techOptions.map((tech) => (
@@ -96,10 +134,10 @@ const Skills = () => {
                                         ${selected === tech.key
                                             ? "border-yellow-400 scale-110 shadow-lg shadow-yellow-400/20"
                                             : "border-white/30 scale-90 opacity-70 hover:opacity-100"}
-                                        w-16 h-16`}
+                                        w-10 h-10 md:w-14 md:h-14`}
                                     aria-label={tech.label}
                                 >
-                                    <span className="text-black">{tech.icon}</span>
+                                    <span className="text-black text-sm md:text-base">{tech.icon}</span>
                                 </button>
                             ))}
                         </div>
