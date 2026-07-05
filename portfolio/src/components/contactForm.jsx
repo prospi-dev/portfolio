@@ -74,7 +74,7 @@ const ContactForm = () => {
             value={form.name}
             onChange={handleChange}
             required
-            className="w-full pl-10 pr-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-gray-300 outline-none focus:border-yellow-400 focus:ring-2 focus:ring-yellow-400/20 transition-all duration-300"
+            className="w-full pl-10 pr-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-gray-300 outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-300"
           />
         </div>
 
@@ -90,7 +90,7 @@ const ContactForm = () => {
             value={form.email}
             onChange={handleChange}
             required
-            className="w-full pl-10 pr-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-gray-300 outline-none focus:border-yellow-400 focus:ring-2 focus:ring-yellow-400/20 transition-all duration-300"
+            className="w-full pl-10 pr-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-gray-300 outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-300"
           />
         </div>
 
@@ -106,7 +106,7 @@ const ContactForm = () => {
             onChange={handleChange}
             required
             rows={5}
-            className="w-full pl-10 pr-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-gray-300 outline-none focus:border-yellow-400 focus:ring-2 focus:ring-yellow-400/20 transition-all duration-300 resize-none"
+            className="w-full pl-10 pr-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-gray-300 outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-300 resize-none"
           />
         </div>
       </div>
@@ -119,7 +119,7 @@ const ContactForm = () => {
             ? "bg-green-500 hover:bg-green-400 cursor-not-allowed" 
             : sending 
             ? "bg-gray-500 cursor-not-allowed"
-            : "bg-gradient-to-r from-yellow-400 to-orange-400 hover:from-yellow-300 hover:to-orange-300 hover:scale-105 text-black"
+            : "bg-fuchsia-600 hover:bg-fuchsia-500 hover:scale-105 text-white"
         }`}
         disabled={sent || sending}
       >
