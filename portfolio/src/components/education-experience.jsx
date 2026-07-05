@@ -113,12 +113,79 @@ const Experience = () => (
     </div>
     
     <motion.div 
-      className="w-full"
+      className="w-full flex flex-col gap-6"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: 0.2 }}
       viewport={{ once: true }}
     >
+      <div className="bg-white/10 backdrop-blur-sm border border-yellow-400/50 rounded-xl p-6 text-left hover:bg-white/15 transition-all duration-300 hover:scale-105 shadow-lg w-xs lg:w-full">
+        <div className="flex items-start gap-3 mb-4">
+          <FaBriefcase className="text-yellow-400 text-xl mt-1 flex-shrink-0" />
+          <div className="flex-1">
+            <h3 className="text-yellow-300 font-bold text-xl mb-1">
+              FEMETE
+            </h3>
+            <p className="text-cyan-300 font-semibold text-lg mb-1">Backend Lead / Full Stack Developer</p>
+            <p className="text-gray-300 mb-3">
+              Technical lead for backend and full-stack developer on Domitila, a corporate ERP system for HR management and social projects.
+            </p>
+
+            <div className="bg-black/20 rounded-lg p-4 mb-4">
+              <h4 className="text-white font-medium mb-2">Key Responsibilities:</h4>
+              <ul className="space-y-2 text-gray-300">
+                <li className="flex items-start gap-2">
+                  <span className="text-yellow-400 text-xs mt-2">●</span>
+                  <span>Technical direction of the backend area, defining system architecture and design guidelines in Spring Boot/JPA for a 5-person backend team (within a 15-person project team).</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-yellow-400 text-xs mt-2">●</span>
+                  <span>Designed and normalized a relational database schema in MySQL with 15+ tables, implementing engine-level automated logic (triggers, computed fields) to ensure the integrity of complex business relationships.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-yellow-400 text-xs mt-2">●</span>
+                  <span>Established strict development standards for the team: zero native queries, exclusive use of JPQL, decoupling via DTOs, and advanced entity mapping with @MapsId.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-yellow-400 text-xs mt-2">●</span>
+                  <span>Designed and implemented the system's security and authentication layer from scratch using Spring Security and JSON Web Tokens (JWT).</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-yellow-400 text-xs mt-2">●</span>
+                  <span>Technical mentoring and code reviews for the development team, ensuring consistency across application layers.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-yellow-400 text-xs mt-2">●</span>
+                  <span>Contributed to the frontend, building dynamic interfaces with Vue.js 3 and global state management with Pinia.</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="flex flex-wrap gap-2 mb-4">
+              {["Java", "Spring Boot", "Spring Security", "JWT", "JPA/Hibernate", "MySQL", "Vue.js 3", "Pinia", "Docker", "Git"].map((tech) => (
+                <span
+                  key={tech}
+                  className="px-3 py-1 bg-black/20 text-yellow-300 text-xs font-medium rounded-full border border-yellow-400/30"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div className="flex items-center justify-between text-sm text-gray-400">
+          <div className="flex items-center gap-2">
+            <FaMapMarkerAlt className="text-yellow-400" />
+            <span>Santa Cruz de Tenerife, Spain (On-site/Hybrid)</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <FaRegCalendarAlt className="text-yellow-400" />
+            <span>May 2026 - Present</span>
+          </div>
+        </div>
+      </div>
+
       <div className="bg-white/10 backdrop-blur-sm border border-yellow-400/50 rounded-xl p-6 text-left hover:bg-white/15 transition-all duration-300 hover:scale-105 shadow-lg w-xs lg:w-full">
         <div className="flex items-start gap-3 mb-4">
           <FaBriefcase className="text-yellow-400 text-xl mt-1 flex-shrink-0" />
