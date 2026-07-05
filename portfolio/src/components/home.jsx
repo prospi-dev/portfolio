@@ -63,7 +63,7 @@ const Home = () => (
       </a>
 
       <a
-        href="/files/Manuel-Prosperi-CV-EN.pdf"
+        href="/files/Manuel_Prosperi_CV_EN.pdf"
         download
         className="bg-gray-900 w-[70%] md:w-[60%] mt-2 text-gray-400 font-medium py-3 rounded-xl transition-all duration-300 flex items-center justify-center border-b border-transparent hover:border-fuchsia-500 hover:text-fuchsia-400 group"
         id="downloadcv-button"
