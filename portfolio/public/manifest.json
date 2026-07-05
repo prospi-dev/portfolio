@@ -1,0 +1,16 @@
+{
+  "name": "Manuel Prosperi | Portfolio",
+  "short_name": "M. Prosperi",
+  "description": "Portfolio of Manuel Prosperi, Full-Stack Developer.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#15232b",
+  "theme_color": "#15232b",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}
