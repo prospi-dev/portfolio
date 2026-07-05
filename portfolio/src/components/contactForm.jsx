@@ -71,6 +71,7 @@ const ContactForm = () => {
             type="text"
             name="name"
             placeholder="Your Name"
+            aria-label="Your Name"
             value={form.name}
             onChange={handleChange}
             required
@@ -87,6 +88,7 @@ const ContactForm = () => {
             type="email"
             name="email"
             placeholder="Your Email"
+            aria-label="Your Email"
             value={form.email}
             onChange={handleChange}
             required
@@ -102,6 +104,7 @@ const ContactForm = () => {
           <textarea
             name="message"
             placeholder="Your Message"
+            aria-label="Your Message"
             value={form.message}
             onChange={handleChange}
             required
@@ -114,6 +117,8 @@ const ContactForm = () => {
       {/* Submit Button */}
       <button
         type="submit"
+        aria-live="polite"
+        aria-atomic="true"
         className={`py-4 px-6 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center gap-2 shadow-lg ${
           sent 
             ? "bg-green-500 hover:bg-green-400 cursor-not-allowed" 
@@ -144,6 +149,7 @@ const ContactForm = () => {
       {/* Error Message */}
       {error && (
         <motion.p 
+          role="alert"
           className="text-red-400 text-center text-sm bg-red-400/10 border border-red-400/30 rounded-lg p-3"
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}

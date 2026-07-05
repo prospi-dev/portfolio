@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "../index.css";
 const navLinks = [
   { href: "#home", label: "Home" },
@@ -12,6 +12,8 @@ const navLinks = [
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const menuButtonRef = useRef(null);
+  const firstLinkRef = useRef(null);
 
   useEffect(() => {
     const onScroll = () => {
@@ -20,6 +22,21 @@ const Header = () => {
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  useEffect(() => {
+    if (menuOpen) {
+      firstLinkRef.current?.focus();
+    }
+
+    const onKeyDown = (e) => {
+      if (e.key === "Escape" && menuOpen) {
+        setMenuOpen(false);
+        menuButtonRef.current?.focus();
+      }
+    };
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [menuOpen]);
 
   return (
     <header
@@ -31,9 +48,12 @@ const Header = () => {
 
       {/* Hamburger menu (mobile) */}
       <button
+        ref={menuButtonRef}
         className="md:hidden text-white text-3xl focus:outline-none z-30 hover:text-gray-400 cursor-pointer hover:scale-120 transition-transform duration-200"
         onClick={() => setMenuOpen(true)}
         aria-label="Open menu"
+        aria-expanded={menuOpen}
+        aria-controls="mobile-menu"
       >
         <svg width="32" height="32" fill="none" stroke="currentColor" strokeWidth="2">
           <line x1="6" y1="10" x2="26" y2="10" />
@@ -43,6 +63,11 @@ const Header = () => {
       </button>
 
       <div
+        id="mobile-menu"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Mobile navigation"
+        aria-hidden={!menuOpen}
         className={`fixed inset-0 bg-[#1a232a]/85 flex flex-col items-center justify-center z-40 transition-all duration-300 ${menuOpen
           ? "opacity-100 translate-y-0 pointer-events-auto"
           : "opacity-0 -translate-y-8 pointer-events-none"
@@ -55,6 +80,7 @@ const Header = () => {
             className="text-white text-3xl focus:outline-none cursor-pointer hover:text-gray-400 hover:scale-120 transition-transform duration-200"
             onClick={() => setMenuOpen(false)}
             aria-label="Close menu"
+            tabIndex={menuOpen ? 0 : -1}
           >
             <svg width="32" height="32" fill="none" stroke="currentColor" strokeWidth="2">
               <line x1="8" y1="8" x2="24" y2="24" />
@@ -64,13 +90,15 @@ const Header = () => {
         </div>
         {/* Nav links */}
         <nav className="flex flex-col items-center gap-8 font-extralight">
-          {navLinks.map((link) => (
+          {navLinks.map((link, index) => (
             <a
               key={link.href}
+              ref={index === 0 ? firstLinkRef : null}
               href={link.href}
-              className="neon-hover2 text-white text-xl py-2 px-6 rounded-lg transition-all duration-200 hover:text-yellow-400 hover:bg-[#22303c] hover:scale-110"
+              className="neon-hover2 text-white text-xl py-2 px-6 rounded-lg transition-all duration-200 hover:text-cyan-400 hover:bg-[#22303c] hover:scale-110"
               style={{ display: "inline-block" }}
               onClick={() => setMenuOpen(false)}
+              tabIndex={menuOpen ? 0 : -1}
             >
               {link.label}
             </a>
