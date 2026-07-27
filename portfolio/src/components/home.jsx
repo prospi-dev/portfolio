@@ -16,7 +16,7 @@ const Home = () => (
       <span className="font-normal text-gray-200">a Full Stack Developer.</span>
     </h1>
     <h2 className="text-lg md:text-xl font-medium text-cyan-300 mb-4">
-      Full Stack Developer | Backend Technical Lead (Java · Spring Boot) | Vue.js 3 · MySQL · JWT
+      Full Stack Developer | Backend Technical Lead (Java · Spring Boot) | React · MySQL · JWT
     </h2>
     <p className="text-gray-400 max-w-lg mb-6">
       I'm a Full Stack Developer specializing in backend architecture with Java and Spring Boot, and in building dynamic interfaces with Vue.js 3. I currently lead the backend area for Domitila, a corporate ERP system for HR management and social projects, setting architecture, security, and code quality standards for a 5-person development team. I complement this experience with independent, end-to-end software development in the .NET/React ecosystem, demonstrating command of core backend fundamentals independently of the framework.
