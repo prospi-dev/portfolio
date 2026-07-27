@@ -8,7 +8,7 @@ const containerVariants = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.2,
+      staggerChildren: 0.15,
     },
   },
 };
@@ -18,17 +18,35 @@ const itemVariants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.5 }
+    transition: { duration: 0.5 },
   },
 };
+
+const TimelineGroup = ({ items, renderCard, dotColorClass }) => (
+  <motion.div
+    className="relative flex flex-col gap-6 pl-8 sm:pl-10"
+    variants={containerVariants}
+    initial="hidden"
+    whileInView="visible"
+    viewport={{ once: true, amount: 0.2 }}
+  >
+    <div className="absolute left-1.5 top-2 bottom-2 w-px bg-white/15" aria-hidden="true" />
+    {items.map((item) => (
+      <motion.div key={item.title ?? item.company} className="relative" variants={itemVariants}>
+        <span className={`absolute -left-8 sm:-left-10 top-6 w-3 h-3 rounded-full ${dotColorClass} ring-4 ring-[#090a0f]`} />
+        {renderCard(item)}
+      </motion.div>
+    ))}
+  </motion.div>
+);
 
 const Education = () => (
   <motion.section
     id="education"
-    className="py-8 flex flex-col items-center max-w-lg mx-auto"
-    initial={{ opacity: 0, x: -50 }}
-    whileInView={{ opacity: 1, x: 0 }}
-    transition={{ duration: 0.7, ease: "easeOut" }}
+    className="w-full"
+    initial={{ opacity: 0, y: 20 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.6, ease: "easeOut" }}
     viewport={{ once: true, amount: 0.3 }}
   >
     <div className="flex items-center gap-3 mb-8">
@@ -38,38 +56,32 @@ const Education = () => (
       </h2>
     </div>
 
-    <motion.div
-      className="flex flex-col gap-6 w-full"
-      variants={containerVariants}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true }}
-    >
-      {educationData.map((item) => (
-        <motion.div key={item.title} variants={itemVariants}>
-          <TimelineCard
-            icon={item.icon}
-            iconColor={item.iconColor}
-            borderColor="border-fuchsia-400/50"
-            title={item.title}
-            subtitle={item.institution}
-            location={item.location}
-            date={item.date}
-            accentColor="text-fuchsia-400"
-          />
-        </motion.div>
-      ))}
-    </motion.div>
+    <TimelineGroup
+      items={educationData}
+      dotColorClass="bg-fuchsia-400"
+      renderCard={(item) => (
+        <TimelineCard
+          icon={item.icon}
+          iconColor={item.iconColor}
+          borderColor="border-fuchsia-400/50"
+          title={item.title}
+          subtitle={item.institution}
+          location={item.location}
+          date={item.date}
+          accentColor="text-fuchsia-400"
+        />
+      )}
+    />
   </motion.section>
 );
 
 const Experience = () => (
   <motion.section
     id="experience"
-    className="py-8 flex flex-col items-center mx-auto"
-    initial={{ opacity: 0, x: 50 }}
-    whileInView={{ opacity: 1, x: 0 }}
-    transition={{ duration: 0.7, ease: "easeOut" }}
+    className="w-full"
+    initial={{ opacity: 0, y: 20 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
     viewport={{ once: true, amount: 0.3 }}
   >
     <div className="flex items-center gap-3 mb-8">
@@ -79,16 +91,11 @@ const Experience = () => (
       </h2>
     </div>
 
-    <motion.div
-      className="w-full flex flex-col gap-6"
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, delay: 0.2 }}
-      viewport={{ once: true }}
-    >
-      {experienceData.map((item) => (
+    <TimelineGroup
+      items={experienceData}
+      dotColorClass="bg-cyan-400"
+      renderCard={(item) => (
         <TimelineCard
-          key={item.company}
           icon={item.icon}
           iconColor="text-cyan-400"
           borderColor="border-cyan-400/50"
@@ -102,10 +109,9 @@ const Experience = () => (
           accentColor="text-cyan-400"
           location={item.location}
           date={item.date}
-          fullWidth
         />
-      ))}
-    </motion.div>
+      )}
+    />
   </motion.section>
 );
 

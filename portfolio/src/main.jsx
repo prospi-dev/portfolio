@@ -23,10 +23,7 @@ const App = () => {
         <Home />
         <Aboutme />
         <Skills />
-        <section id="education-experience" className="flex flex-col lg:flex-row gap-10 
-                                                    items-center w-fit max-w-[95vw] lg:max-w-full mx-auto bg-white/5 backdrop-blur-lg border 
-                                                    border-white/10 rounded-3xl p-8 md:p-12 shadow-[0_0_40px_rgba(0,0,0,0.3)]
-                                                    lg:justify-center ">
+        <section id="education-experience" className="flex flex-col gap-12 w-full max-w-3xl mx-auto bg-white/5 backdrop-blur-lg border border-white/10 rounded-3xl p-6 md:p-10 lg:p-12 shadow-[0_0_40px_rgba(0,0,0,0.3)]">
           <Education />
           <Experience />
         </section>

@@ -1,4 +1,7 @@
-import { FaRegCalendarAlt, FaMapMarkerAlt } from "react-icons/fa";
+import { useState } from "react";
+import { FaRegCalendarAlt, FaMapMarkerAlt, FaChevronDown } from "react-icons/fa";
+
+const RESPONSIBILITIES_PREVIEW_COUNT = 2;
 
 const TimelineCard = ({
     icon: Icon,
@@ -16,10 +19,16 @@ const TimelineCard = ({
     accentColor,
     location,
     date,
-    fullWidth = false,
-}) => (
+}) => {
+    const [expanded, setExpanded] = useState(false);
+    const hasMore = responsibilities && responsibilities.length > RESPONSIBILITIES_PREVIEW_COUNT;
+    const visibleResponsibilities = hasMore && !expanded
+        ? responsibilities.slice(0, RESPONSIBILITIES_PREVIEW_COUNT)
+        : responsibilities;
+
+    return (
     <div
-        className={`bg-white/10 backdrop-blur-sm border ${borderColor} rounded-xl p-6 text-left hover:bg-white/15 transition-all duration-300 hover:scale-105 shadow-lg w-xs ${fullWidth ? "lg:w-full" : "lg:w-lg"}`}
+        className={`w-full bg-white/10 backdrop-blur-sm border ${borderColor} rounded-xl p-6 text-left hover:bg-white/15 transition-all duration-300 hover:scale-[1.02] shadow-lg`}
     >
         <div className="flex items-start gap-3 mb-3">
             <Icon className={`${iconColor} text-xl mt-1 flex-shrink-0`} />
@@ -32,13 +41,24 @@ const TimelineCard = ({
                     <div className="bg-black/20 rounded-lg p-4 mb-4 mt-3">
                         <h4 className="text-white font-medium mb-2">Key Responsibilities:</h4>
                         <ul className="space-y-2 text-gray-300">
-                            {responsibilities.map((item) => (
+                            {visibleResponsibilities.map((item) => (
                                 <li key={item} className="flex items-start gap-2">
                                     <span className={`${accentColor} text-xs mt-2`}>●</span>
                                     <span>{item}</span>
                                 </li>
                             ))}
                         </ul>
+                        {hasMore && (
+                            <button
+                                type="button"
+                                onClick={() => setExpanded((prev) => !prev)}
+                                className={`flex items-center gap-1 mt-3 text-sm font-medium ${accentColor} hover:underline cursor-pointer`}
+                                aria-expanded={expanded}
+                            >
+                                {expanded ? "Show less" : `Show ${responsibilities.length - RESPONSIBILITIES_PREVIEW_COUNT} more`}
+                                <FaChevronDown className={`text-xs transition-transform duration-300 ${expanded ? "rotate-180" : ""}`} />
+                            </button>
+                        )}
                     </div>
                 )}
 
@@ -68,6 +88,7 @@ const TimelineCard = ({
             </div>
         </div>
     </div>
-);
+    );
+};
 
 export default TimelineCard;
